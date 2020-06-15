@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:god_bank/screens/transferList/TransferList.dart';
+import 'package:god_bank/screens/transfer/list/TransferList.dart';
 
 void main() => runApp(GodBankApp());
 

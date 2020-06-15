@@ -1,8 +1,8 @@
 import 'package:god_bank/controller/TransferControl.dart';
 import 'package:god_bank/models/transfer.dart';
 import 'file:///C:/Users/b.arruda.de.castro/IdeaProjects/god_bank/lib/components/Menu.dart';
-import 'package:god_bank/screens/transferForm/TransferFormBody.dart';
-import 'package:god_bank/screens/transferList/TransferItem.dart';
+import 'package:god_bank/screens/transfer/form/TransferFormBody.dart';
+import 'package:god_bank/screens/transfer/list/TransferItem.dart';
 import 'package:flutter/material.dart';
 
 class TransferList extends StatefulWidget {

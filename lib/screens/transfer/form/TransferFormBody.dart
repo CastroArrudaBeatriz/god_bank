@@ -1,4 +1,4 @@
-import 'package:god_bank/screens/transferForm/TransferForm.dart';
+import 'package:god_bank/screens/transfer/form/TransferForm.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
