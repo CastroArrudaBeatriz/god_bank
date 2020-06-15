@@ -1,0 +1,11 @@
+const perfil = 'Perfil';
+const sobre = 'Sobre';
+const numeroContaLabel = 'Número da conta';
+const hintConta = '0000';
+const valorLabel = 'Valor';
+const hintValor = '0.00';
+const buttonTransferirLabel = 'transferir';
+const appbarFormLabel = 'Criando tranferência';
+const appbarListLabel = 'Transferências';
+const listValorLabel = 'valor: ';
+const listContaLabel = 'conta: ';

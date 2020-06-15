@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:god_bank/models/transfer.dart';
+import 'package:god_bank/models/Transfer.dart';
 
 class TransferControl {
 

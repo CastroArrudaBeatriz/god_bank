@@ -1,6 +1,7 @@
 import 'package:god_bank/screens/transfer/form/TransferForm.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import '../../../properties_pt_br.dart' as properties;
 
 class TransferFormBody extends StatefulWidget{
 
@@ -17,7 +18,7 @@ class TransferFormBodyState extends State<TransferFormBody>{
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Criando tranferência'),
+        title: Text(properties.appbarFormLabel),
       ),
       body: TransferForm(),
     );

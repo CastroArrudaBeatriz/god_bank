@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:god_bank/components/TextEditor.dart';
 import 'package:god_bank/controller/TransferControl.dart';
+import '../../../properties_pt_br.dart' as properties;
 
 class TransferForm extends StatefulWidget{
 
@@ -24,14 +25,14 @@ class TransferFormState extends State<TransferForm> {
       body: SingleChildScrollView(
         child: Column(
           children: <Widget>[
-            TextEditor(controller: widget._countNumberControl,labelText: 'Número da conta',hintText: '0000',),
+            TextEditor(controller: widget._countNumberControl,labelText: properties.numeroContaLabel ,hintText: properties.hintConta,),
 
-            TextEditor(controller: widget._valueControl, labelText: 'Valor',hintText: '0.00',icon: Icons.monetization_on,),
+            TextEditor(controller: widget._valueControl, labelText: properties.valorLabel ,hintText: properties.hintValor ,icon: Icons.monetization_on,),
 
             const SizedBox(height: 20,),
 
             RaisedButton(
-              child: const Text('transferir'),
+              child: const Text(properties.buttonTransferirLabel),
               onPressed: () {
                 widget.transferControl.formatTransfer(context, widget._countNumberControl, widget._valueControl);
               },
