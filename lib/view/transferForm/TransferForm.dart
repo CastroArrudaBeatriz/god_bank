@@ -3,7 +3,7 @@ import 'package:god_bank/controller/TransferControl.dart';
 import 'package:god_bank/model/transfer.dart';
 import 'package:god_bank/view/transferForm/TransferInputForm.dart';
 
-class TransferForm extends StatelessWidget{
+class TransferForm extends StatefulWidget{
 
   final TransferControl transferControl = new TransferControl();
 
@@ -11,26 +11,35 @@ class TransferForm extends StatelessWidget{
   final TextEditingController _valueControl = new TextEditingController();
 
   @override
+  State<StatefulWidget> createState() {
+    return TransferFormState();
+  }
+}
+
+
+class TransferFormState extends State<TransferForm> {
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
 
-      body: Column(
-        children: <Widget>[
-          TransferInputForm(controller: _countNumberControl,labelText: 'Número da conta',hintText: '0000',),
+      body: SingleChildScrollView(
+        child: Column(
+          children: <Widget>[
+            TransferInputForm(controller: widget._countNumberControl,labelText: 'Número da conta',hintText: '0000',),
 
-          TransferInputForm(controller: _valueControl, labelText: 'Valor',hintText: '0.00',icon: Icons.monetization_on,),
+            TransferInputForm(controller: widget._valueControl, labelText: 'Valor',hintText: '0.00',icon: Icons.monetization_on,),
 
-          const SizedBox(height: 20,),
+            const SizedBox(height: 20,),
 
-          RaisedButton(
-            child: const Text('transferir', style: TextStyle(fontSize: 18, color: Colors.white)),
-            color: Colors.orangeAccent,
-            onPressed: () {
-              transferControl.formatTransfer(context, _countNumberControl, _valueControl);
-            },
-          )
+            RaisedButton(
+              child: const Text('transferir'),
+              onPressed: () {
+                widget.transferControl.formatTransfer(context, widget._countNumberControl, widget._valueControl);
+              },
+            )
 
-        ],
+          ],
+        ),
       ),
     );
   }

@@ -20,10 +20,9 @@ class TransferInputForm extends StatelessWidget {
             fontSize: 18.0
         ),
         decoration: InputDecoration(
-            icon: icon != null ? Icon(icon, color: Colors.orangeAccent,) : null,
+            icon: icon != null ? Icon(icon) : null,
             labelText: labelText,
             hintText: hintText,
-            labelStyle: TextStyle(color: Colors.orangeAccent)
         ),
         keyboardType: TextInputType.number,
       ),

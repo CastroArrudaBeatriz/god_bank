@@ -24,8 +24,7 @@ class TransferListState extends State<TransferList> {
     return Scaffold(
 
       appBar: AppBar(
-        title: Text('Transferências'),
-        backgroundColor: Colors.orangeAccent,
+        title: Text('Transferências')
       ),
 
       drawer: Menu(),
@@ -41,7 +40,6 @@ class TransferListState extends State<TransferList> {
 
       floatingActionButton: FloatingActionButton(
         child: Icon(Icons.add),
-        backgroundColor: Colors.orangeAccent,
         onPressed: () {
 
           final Future<Transfer> future = Navigator.push(context, MaterialPageRoute(builder: (context) {
@@ -51,8 +49,11 @@ class TransferListState extends State<TransferList> {
           future.then((value) {
             debugPrint('clicou no botao confirmar e disparou then do future');
             debugPrint('$value'.toString());
-            widget._transferList.add(value);
-            setState((){});
+            setState((){
+              if(value != null){
+                widget._transferList.add(value);
+              }
+            });
           });
         },
       ),
