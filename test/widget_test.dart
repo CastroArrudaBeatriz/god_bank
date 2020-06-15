@@ -8,7 +8,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 
-import 'package:god_bank/view/main.dart';
+import 'file:///C:/Users/b.arruda.de.castro/IdeaProjects/god_bank/lib/main.dart';
 
 void main() {
   testWidgets('Counter increments smoke test', (WidgetTester tester) async {

@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class TransferInputForm extends StatelessWidget {
+class TextEditor extends StatelessWidget {
 
   final TextEditingController controller;
   final String labelText;
   final String hintText;
   final IconData icon;
 
-  TransferInputForm({this.controller, this.labelText, this.hintText, this.icon});
+  TextEditor({this.controller, this.labelText, this.hintText, this.icon});
 
   @override
   Widget build(BuildContext context) {

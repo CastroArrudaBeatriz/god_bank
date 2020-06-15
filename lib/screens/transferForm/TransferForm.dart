@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:god_bank/components/TextEditor.dart';
 import 'package:god_bank/controller/TransferControl.dart';
-import 'package:god_bank/model/transfer.dart';
-import 'package:god_bank/view/transferForm/TransferInputForm.dart';
 
 class TransferForm extends StatefulWidget{
 
@@ -25,9 +24,9 @@ class TransferFormState extends State<TransferForm> {
       body: SingleChildScrollView(
         child: Column(
           children: <Widget>[
-            TransferInputForm(controller: widget._countNumberControl,labelText: 'Número da conta',hintText: '0000',),
+            TextEditor(controller: widget._countNumberControl,labelText: 'Número da conta',hintText: '0000',),
 
-            TransferInputForm(controller: widget._valueControl, labelText: 'Valor',hintText: '0.00',icon: Icons.monetization_on,),
+            TextEditor(controller: widget._valueControl, labelText: 'Valor',hintText: '0.00',icon: Icons.monetization_on,),
 
             const SizedBox(height: 20,),
 

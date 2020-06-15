@@ -1,4 +1,4 @@
-import 'package:god_bank/model/transfer.dart';
+import 'package:god_bank/models/transfer.dart';
 import 'package:flutter/material.dart';
 
 class TransferItem extends StatelessWidget{
