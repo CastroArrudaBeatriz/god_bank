@@ -44,22 +44,21 @@ class TransferListState extends State<TransferList> {
         child: Icon(Icons.add),
         onPressed: () {
 
-          final Future<Transfer> future = Navigator.push(context, MaterialPageRoute(builder: (context) {
+          Navigator.push(context, MaterialPageRoute(builder: (context) {
             return TransferFormBody();
-          }));
+          })).then((value) =>_addTransferToList(value));
 
-          future.then((value) {
-            debugPrint('clicou no botao confirmar e disparou then do future');
-            debugPrint('$value'.toString());
-            setState((){
-              if(value != null){
-                widget._transferList.add(value);
-              }
-            });
-          });
         },
       ),
     );
+  }
+
+  void _addTransferToList(value) {
+    setState((){
+      if(value != null){
+        widget._transferList.add(value);
+      }
+    });
   }
 
 }
